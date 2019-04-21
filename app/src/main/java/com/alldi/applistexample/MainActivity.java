@@ -41,7 +41,11 @@ public class MainActivity extends AppCompatActivity {
         act.okBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "확인버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "확인버튼을 눌렀습니다.", Toast.LENGTH_SHORT).show();
+
+                appList.add(new App(10, "임시 게임", "이상", 4,7000, false));
+                appAdapter.notifyDataSetChanged();
+                act.appRankListView.smoothScrollToPosition(appList.size()-1);
             }
         });
 
@@ -66,7 +70,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Toast.makeText(MainActivity.this, String.format("%d번 줄을 오래 누름",position), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, String.format("%d번 줄을 오래 누름",position), Toast.LENGTH_SHORT).show();
+
+                appList.remove(position);
+
+                appAdapter.notifyDataSetChanged();
+
                 return true;
             }
         });
