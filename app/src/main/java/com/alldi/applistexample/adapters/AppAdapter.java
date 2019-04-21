@@ -47,7 +47,14 @@ public class AppAdapter extends ArrayAdapter<App> {
         ImageView starImv4 = row.findViewById(R.id.starImv4);
         TextView InstallTxt = row.findViewById(R.id.InstallTxt);
 
+        rankTxt.setText(String.format("%d. %s",appDate.rank,appDate.title));
+        companyTxt.setText(appDate.companyName);
 
+        if (appDate.isMine){
+
+        }else {
+            InstallTxt.setText(String.format("%,d원",appDate.price));
+        }
 
 
         return row;
