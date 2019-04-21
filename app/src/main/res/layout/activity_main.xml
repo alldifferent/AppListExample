@@ -7,15 +7,14 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
         android:orientation="vertical"
-        >
+        tools:context=".MainActivity">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            />
+            android:textSize="16sp" />
+
         <ListView
             android:id="@+id/appRankListView"
             android:layout_width="match_parent"
@@ -23,7 +22,6 @@
 
 
         </ListView>
-
 
 
     </LinearLayout>
