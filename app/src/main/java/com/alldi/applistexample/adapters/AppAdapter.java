@@ -37,6 +37,7 @@ public class AppAdapter extends ArrayAdapter<App> {
             row = inf.inflate(R.layout.app_list_item, null);
         }
 
+        App appDate = mList.get(position);
         TextView rankTxt = row.findViewById(R.id.rankTxt);
         TextView companyTxt = row.findViewById(R.id.companyTxt);
         ImageView starImv = row.findViewById(R.id.starImv);
@@ -45,6 +46,7 @@ public class AppAdapter extends ArrayAdapter<App> {
         ImageView starImv3 = row.findViewById(R.id.starImv3);
         ImageView starImv4 = row.findViewById(R.id.starImv4);
         TextView InstallTxt = row.findViewById(R.id.InstallTxt);
+
 
 
 
