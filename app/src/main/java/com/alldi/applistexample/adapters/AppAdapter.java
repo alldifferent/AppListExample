@@ -40,11 +40,11 @@ public class AppAdapter extends ArrayAdapter<App> {
         App appDate = mList.get(position);
         TextView rankTxt = row.findViewById(R.id.rankTxt);
         TextView companyTxt = row.findViewById(R.id.companyTxt);
-        ImageView starImv = row.findViewById(R.id.starImv);
-        ImageView starImv1 = row.findViewById(R.id.starImv1);
-        ImageView starImv2 = row.findViewById(R.id.starImv2);
-        ImageView starImv3 = row.findViewById(R.id.starImv3);
-        ImageView starImv4 = row.findViewById(R.id.starImv4);
+//        ImageView starImv = row.findViewById(R.id.starImv);
+//        ImageView starImv1 = row.findViewById(R.id.starImv1);
+//        ImageView starImv2 = row.findViewById(R.id.starImv2);
+//        ImageView starImv3 = row.findViewById(R.id.starImv3);
+//        ImageView starImv4 = row.findViewById(R.id.starImv4);
         TextView InstallTxt = row.findViewById(R.id.InstallTxt);
 
         rankTxt.setText(String.format("%d. %s",appDate.rank,appDate.title));
