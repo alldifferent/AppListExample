@@ -27,6 +27,7 @@
             >
 
             <TextView
+                android:id="@+id/rankTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
@@ -44,6 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="게임회사 이름"
+                    android:id="@+id/companyTxt"
                     />
                 <ImageView
                     android:layout_width="20dp"
@@ -64,27 +66,32 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/star_empty"
+                    android:id="@+id/starImv"
                     />
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/star_empty"
+                    android:id="@+id/starImv1"
                     />
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/star_empty"
+                    android:id="@+id/starImv2"
                     />
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/star_empty"
+                    android:id="@+id/starImv3"
                     />
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/star_empty"
+                    android:id="@+id/starImv4"
                     />
 
             </LinearLayout>
@@ -95,6 +102,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:id="@+id/InstallTxt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="설치된 항목"

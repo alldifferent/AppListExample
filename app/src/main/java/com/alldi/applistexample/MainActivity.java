@@ -4,6 +4,7 @@ import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.alldi.applistexample.adapters.AppAdapter;
 import com.alldi.applistexample.databinding.ActivityMainBinding;
 import com.alldi.applistexample.datas.App;
 
@@ -14,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     List<App> appList = new ArrayList<>();
     ActivityMainBinding act;
+    AppAdapter appAdapter;
 
 
     @Override
@@ -32,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void setValues(){
+
+        appAdapter = new AppAdapter(MainActivity.this, appList);
+        act.appRankListView.setAdapter(appAdapter);
 
     }
 
