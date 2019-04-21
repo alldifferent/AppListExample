@@ -8,9 +8,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         >
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            />
+        <ListView
+            android:id="@+id/appRankListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </ListView>
 
 
 
