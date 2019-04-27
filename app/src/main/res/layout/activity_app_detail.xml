@@ -144,6 +144,33 @@
 
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="2019년 4월 27일"
+                android:gravity="center"
+                android:id="@+id/dateTxt"
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:text="오전 11시 03분"
+                android:gravity="center"
+                android:id="@+id/timeTxt"
+                />
+
+        </LinearLayout>
     </LinearLayout>
 
 </layout>

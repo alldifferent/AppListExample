@@ -74,47 +74,6 @@ public class AppAdapter extends ArrayAdapter<App> {
             stars.get(i).setImageResource(R.drawable.star_fill);
         }
 
-//        if (appDate.userRanting == 1){
-//            starImv.setImageResource(R.drawable.star_fill);
-//            starImv1.setImageResource(R.drawable.star_empty);
-//            starImv2.setImageResource(R.drawable.star_empty);
-//            starImv3.setImageResource(R.drawable.star_empty);
-//            starImv4.setImageResource(R.drawable.star_empty);
-//        }else if (appDate.userRanting == 2){
-//            starImv.setImageResource(R.drawable.star_fill);
-//            starImv1.setImageResource(R.drawable.star_fill);
-//            starImv2.setImageResource(R.drawable.star_empty);
-//            starImv3.setImageResource(R.drawable.star_empty);
-//            starImv4.setImageResource(R.drawable.star_empty);
-//        }else if(appDate.userRanting == 3){
-//            starImv.setImageResource(R.drawable.star_fill);
-//            starImv1.setImageResource(R.drawable.star_fill);
-//            starImv2.setImageResource(R.drawable.star_fill);
-//            starImv3.setImageResource(R.drawable.star_empty);
-//            starImv4.setImageResource(R.drawable.star_empty);
-//
-//        }else if (appDate.userRanting == 4){
-//            starImv.setImageResource(R.drawable.star_fill);
-//            starImv1.setImageResource(R.drawable.star_fill);
-//            starImv2.setImageResource(R.drawable.star_fill);
-//            starImv3.setImageResource(R.drawable.star_fill);
-//            starImv4.setImageResource(R.drawable.star_empty);
-//        }else {
-//            starImv.setImageResource(R.drawable.star_fill);
-//            starImv1.setImageResource(R.drawable.star_fill);
-//            starImv2.setImageResource(R.drawable.star_fill);
-//            starImv3.setImageResource(R.drawable.star_fill);
-//            starImv4.setImageResource(R.drawable.star_fill);
-//        }
-//
-//        if (row == null){
-//            starImv.setImageResource(R.drawable.star_empty);
-//            starImv1.setImageResource(R.drawable.star_empty);
-//            starImv2.setImageResource(R.drawable.star_empty);
-//            starImv3.setImageResource(R.drawable.star_empty);
-//            starImv4.setImageResource(R.drawable.star_empty);
-//        }
-
 
         return row;
     }
