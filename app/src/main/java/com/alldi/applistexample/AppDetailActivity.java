@@ -1,6 +1,7 @@
 package com.alldi.applistexample;
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.net.Uri;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.alldi.applistexample.databinding.ActivityAppDetailBinding;
@@ -17,6 +19,7 @@ import com.alldi.applistexample.datas.App;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class AppDetailActivity extends AppCompatActivity {
 
@@ -73,7 +76,7 @@ public class AppDetailActivity extends AppCompatActivity {
                         cal.set(Calendar.MONTH, month);
                         cal.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
-                        cal.set(year,month,dayOfMonth);
+//                        cal.set(year,month,dayOfMonth);
 
 //                        같은 메쏘드인데, arg의 종류/변수에 따라 다른 행동을함. => overLoading의 예시
 
@@ -90,6 +93,27 @@ public class AppDetailActivity extends AppCompatActivity {
             }
         });
 
+        act.timeTxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TimePickerDialog tpd = new TimePickerDialog(AppDetailActivity.this, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+
+                        Calendar cal = Calendar.getInstance();
+                        cal.set(Calendar.HOUR_OF_DAY, hourOfDay);
+                        cal.set(Calendar.MINUTE, minute);
+
+                        SimpleDateFormat sdf = new SimpleDateFormat("a h시 m분", Locale.KOREA);
+                        String timeStr = sdf.format(cal.getTimeInMillis());
+
+                        act.timeTxt.setText(timeStr);
+
+                    }
+                }, 15, 15, false);
+                tpd.show();
+            }
+        });
 
     }
 }
