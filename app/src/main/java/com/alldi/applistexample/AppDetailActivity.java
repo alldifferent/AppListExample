@@ -15,6 +15,7 @@ import android.widget.Toast;
 import com.alldi.applistexample.databinding.ActivityAppDetailBinding;
 import com.alldi.applistexample.datas.App;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class AppDetailActivity extends AppCompatActivity {
@@ -77,6 +78,10 @@ public class AppDetailActivity extends AppCompatActivity {
 //                        같은 메쏘드인데, arg의 종류/변수에 따라 다른 행동을함. => overLoading의 예시
 
 
+                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 M월 d일");
+                        String dateStr = sdf.format(cal.getTimeInMillis());
+
+                        act.dateTxt.setText(dateStr);
 
                     }
                 }, 2019, 3, 27);
