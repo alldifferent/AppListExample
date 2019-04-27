@@ -91,17 +91,17 @@ public class MainActivity extends AppCompatActivity {
 
     void fillApp(){
 
+        appList.add(new App(1,"아스팔트 8: 에어본", "GameLoft", 1, 6000, true));
+        appList.add(new App(2,"Minecraft - Pocket Edition", "Mojang", 2, 5000, true));
+        appList.add(new App(3,"아스팔트 7: 하트", "GameLoft", 3, 1000, false));
+        appList.add(new App(4,"팔라독", "FazeCat", 4, 1800, false));
+        appList.add(new App(5,"Plants Vs Zombies", "EA Swiss Sarl", 5, 5200, false));
+        appList.add(new App(6,"스왐피", "Disney", 1, 1600, false));
         appList.add(new App(1,"아스팔트 8: 에어본", "GameLoft", 2, 6000, true));
         appList.add(new App(2,"Minecraft - Pocket Edition", "Mojang", 3, 5000, true));
         appList.add(new App(3,"아스팔트 7: 하트", "GameLoft", 4, 1000, false));
-        appList.add(new App(4,"팔라독", "FazeCat", 1, 1800, false));
-        appList.add(new App(5,"Plants Vs Zombies", "EA Swiss Sarl", 5, 5200, false));
-        appList.add(new App(6,"스왐피", "Disney", 2, 1600, false));
-        appList.add(new App(1,"아스팔트 8: 에어본", "GameLoft", 5, 6000, true));
-        appList.add(new App(2,"Minecraft - Pocket Edition", "Mojang", 3, 5000, true));
-        appList.add(new App(3,"아스팔트 7: 하트", "GameLoft", 4, 1000, false));
-        appList.add(new App(4,"팔라독", "FazeCat", 1, 1800, false));
-        appList.add(new App(5,"Plants Vs Zombies", "EA Swiss Sarl", 5, 5200, false));
+        appList.add(new App(4,"팔라독", "FazeCat", 5, 1800, false));
+        appList.add(new App(5,"Plants Vs Zombies", "EA Swiss Sarl", 1, 5200, false));
         appList.add(new App(6,"스왐피", "Disney", 2, 1600, false));
 
 
