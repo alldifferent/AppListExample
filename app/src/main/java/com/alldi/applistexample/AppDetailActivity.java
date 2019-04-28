@@ -57,7 +57,17 @@ public class AppDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Uri phoneUri = Uri.parse("tel:019-9876-3949");
-                Intent intent = new Intent(Intent.ACTION_DIAL, phoneUri);
+                Intent intent = new Intent(Intent.ACTION_CALL, phoneUri);
+                startActivity(intent);
+            }
+        });
+
+        act.smsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri smsUri = Uri.parse("smsto:01023455234");
+                Intent intent = new Intent(Intent.ACTION_SENDTO, smsUri);
+                intent.putExtra("sms_body","미리 작성될 메세지");
                 startActivity(intent);
             }
         });
@@ -65,21 +75,13 @@ public class AppDetailActivity extends AppCompatActivity {
         act.dateTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("텍스트뷰 클릭!","실제로 동작하나?");
+
                 DatePickerDialog dpd = new DatePickerDialog(AppDetailActivity.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-//                        Toast.makeText(AppDetailActivity.this, String.format("%d년 %d월 %d일",year,month+1,dayOfMonth), Toast.LENGTH_SHORT).show();
 
-                        Calendar cal = Calendar.getInstance(); // new Calender라고 만들지 않는다.
-                        cal.set(Calendar.YEAR, year);
-                        cal.set(Calendar.MONTH, month);
-                        cal.set(Calendar.DAY_OF_MONTH, dayOfMonth);
-
-//                        cal.set(year,month,dayOfMonth);
-
-//                        같은 메쏘드인데, arg의 종류/변수에 따라 다른 행동을함. => overLoading의 예시
-
+                        Calendar cal = Calendar.getInstance();
+                        cal.set(year, month, dayOfMonth);
 
                         SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 M월 d일");
                         String dateStr = sdf.format(cal.getTimeInMillis());
@@ -88,14 +90,17 @@ public class AppDetailActivity extends AppCompatActivity {
 
                     }
                 }, 2019, 3, 27);
-
                 dpd.show();
+
+
+
             }
         });
 
         act.timeTxt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 TimePickerDialog tpd = new TimePickerDialog(AppDetailActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
@@ -104,16 +109,20 @@ public class AppDetailActivity extends AppCompatActivity {
                         cal.set(Calendar.HOUR_OF_DAY, hourOfDay);
                         cal.set(Calendar.MINUTE, minute);
 
-                        SimpleDateFormat sdf = new SimpleDateFormat("a h시 m분", Locale.KOREA);
+                        SimpleDateFormat sdf = new SimpleDateFormat("a h시 m분",Locale.KOREA);
                         String timeStr = sdf.format(cal.getTimeInMillis());
 
                         act.timeTxt.setText(timeStr);
 
                     }
-                }, 15, 15, false);
+                }, 04,27, false);
+
                 tpd.show();
+
             }
         });
+
+
 
     }
 }
