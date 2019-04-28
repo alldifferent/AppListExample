@@ -26,6 +26,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="(현재 평점 필터 없음)"
+                android:id="@+id/filterRatingTxt"
                 />
 
             <Button
